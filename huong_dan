@@ -1,0 +1,39 @@
+B1 tai notepad va xampp
+
+notepad : https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.5.8/npp.8.5.8.Installer.x64.exe
+xampp :https://sourceforge.net/projects/xampp/files/latest/download
+tai python : https://www.python.org/ftp/python/3.10.5/python-3.10.5-amd64.exe
+
+B2 import module
+
+mod_proxy: The main proxy module for Apache that manages connections and redirects them.
+mod_cache: Used for caching.
+mod_headers: Used for managing HTTP headers.
+mod_deflate: Used for compression.
+mod_lbmethod_byrequests: User for load balancer
+mod_slotmem_shm
+mod_watchdog
+
+B3 : Cài thư viện : pip install Flask
+B4 : Tạo file
+
+
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/test")
+def hello():
+    return "Hello, World!"
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=50100, debug=True)
+
+B5 : Ghi vào file vhosts
+<VirtualHost *:*>
+	<Proxy balancer://mycluster>
+		BalancerMember "http://127.0.0.1:50100"
+		BalancerMember "http://127.0.0.1:50101"
+	</Proxy>
+	ProxyPass        "/web" "balancer://mycluster/"
+	ProxyPassReverse "/web" "balancer://mycluster/"
+</VirtualHost>
