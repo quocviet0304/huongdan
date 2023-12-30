@@ -3,3 +3,4 @@
 * Thêm chế độ click an toàn cho [ Chrome ] ở chế độ [ Vps ]
 ### 3.8.2 ###
 * Sửa lại giải captcha quá nhanh
+* Sửa lại lỗi follow lỗi cũng tính job
