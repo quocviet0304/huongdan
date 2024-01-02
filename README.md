@@ -4,3 +4,8 @@
 ### 3.8.2 ###
 * Sửa lại giải captcha quá nhanh
 * Sửa lại lỗi follow lỗi cũng tính job
+### 3.8.3 ###
+* Sửa lại trình duyệt [ Chrome ] bị lỗi
+* Thêm tùy chọn cách chạy ở [Cài đặt]
+* Sửa lại giao diện
+* Thêm cấu hình tds bằng captcha: https://cap.guru/ru/
